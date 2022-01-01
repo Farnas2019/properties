@@ -1,0 +1,50 @@
+<%- include ('./partials/header')%>	
+<%- include ('./partials/nav')%>	
+<div class="mother">
+	
+	<div class="section1">
+		<img src="/public/dist/images/flogo.png" class="logo" alt="Our LOGO">
+		<!-- <a href="#section">Scroll</a> -->
+		<a href="#" class="play">
+			<img src="/public/dist/css/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/svgs/regular/eye.svg" >
+			<h3>Watch Our Video</h3></a>
+		<div class="content">
+			  <h1>Rent What You Love</h1>
+			  <p>
+				We Provide You with the best you can get
+			  </p>
+		</div>
+		
+		</div>	
+	</div>
+	<div class="carousel slide" id="myslide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="item active" >
+				<img src="/public/dist/images/1.jpg" id="cimage">
+			<div class="carousel-caption">
+				<h1>This House is Located in Yelwawa</h1>
+				<h2>You Will Love The House</h2>
+				<a class="btn" href="#"> View More Details</a>
+			</div>
+			</div>
+			<% house.forEach(function(house){ %>
+			<div class="item">
+				<img src="<%=house.productImg1%>" id="cimage">
+				<div class="carousel-caption">
+					<h1> <%=house.houseName%></h1>
+					<h2><%=house.houseDetails%></h2>
+					<h2><%=house.housePrice%></h2>
+					<a class="btn" href="/product/<%=house.id%>"> View More Details</a>
+				</div>
+			</div>
+			<% });%>
+		</div>
+		
+	</div>
+
+	
+	
+</div>
+<%- include ('./partials/footer')%>
+		
+

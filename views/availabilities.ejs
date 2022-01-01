@@ -1,0 +1,75 @@
+<%- include ('./partials/header')%>	
+<%- include ('./partials/nav')%>	
+<style>
+  body{
+    background-image: url('/public/dist/css/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/svgs/Page-Turner\ \(1\).svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .container{
+    margin-top: 8%;
+  }
+  .card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+  }
+  
+  .card-body{
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    height: 80px;
+    padding: 12px;
+    background: #ff0066;
+    transition: 0.5s ease-in-out;;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .card:hover .card-body{
+    width: 100%;
+    height: 75%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+</style>
+<div class="container">
+  <div class="row">
+    <% house.forEach(function(house){ %>
+    <div class="col-4-lg ml-5" id="card">
+      <div class="card mt-2" style="width:300px";>
+        <img src="<%=house.productImg1%>" alt="Img One" class="card-img-top" height="200px" width="300px">
+        <div class="card-body">
+          <h2 class="card-title"><span>Location:</span> <%=house.houseName%></h2>
+          <h3><span>Price:</span><%=house.housePrice%></h3>
+          <h3><span>Specification:</span><%=house.houseLocation%></h3>
+          <h3><span>Type:</span><%=house.houseAvailable%></h3>
+          <a href="/product/<%=house.id%>" class="btn btn-primary"> View Details</a>
+         </div>
+      </div>
+    </div> 
+    <%});%>   
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.col-4-lg').hover(
+    function(){
+      $(this).animate({
+        marginTop: "-=1%",
+    },200);
+    },
+    function(){
+      $(this).animate({
+        marginTop: "0%",
+      },200);
+    
+    });
+  });
+</script>
+<%- include ('./partials/footer')%>

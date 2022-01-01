@@ -1,0 +1,19 @@
+<%- include ('./partials/header')%>
+       <div class="container">
+        <div class="row">
+            <% house.forEach(function(house){ %>
+                <div class="col-md-4">
+                        <div class="card mt-2">
+                            <img src="<%=house.productImg1%>", alt="Image not found", class="card-img-top", height="200">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"> <%=house.houseName%></h5>
+                                <p class="card-text"><%=house.houseDetails%></p>
+                                <h2><%=house.housePrice%></h2>
+                                			            	
+                               <a href="/product/<%=house.id%>" class="btn btn-primary"> View Details</a>
+                            
+                            </div>
+                            </div>
+                            <% });%>
+        </div></div>

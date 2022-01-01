@@ -1,0 +1,42 @@
+<%- include ('./partials/header')%>
+<%- include ('./partials/nav')%>
+       <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                    <div class="card mt-5" >
+                        <img src='/<%=house.productImg1%>', alt="Image not found", class="card-img-top", height="200">
+                        <div class="card-body">
+                            <h5 class="card-title"> <%=house.houseName%></h5>
+                            <p class="card-text"> 'Product Price: N <%=house.housePrice%></p>
+                            <p class="card-text"> 'Product Color:  <%=house.houseLocation%></p>
+                                <p class="card-text"> 'Product Quantity Availabe:  <%=house.houseAvailable%></p>
+                                    <p class="card-text">'Product Details:  <%=house.houseDetails%></p>
+                            </div>
+                    </div>
+            </div>
+                    <div class="col-md-4">
+                        <div class="card mt-5" >
+                        <img src='/<%=house.productImg2%>', alt="Image not found", class="card-img-top", height="200">
+                        </div></div>
+                        <div class="col-md-4">
+                            <div class="card mt-5" >
+                        <img src='/<%=house.productImg3%>', alt="Image not found", class="card-img-top", height="200">
+</div></div>
+<div class="col-md-4">
+    <div class="card mt-5" >
+<img src='/<%=house.productImg4%>', alt="Image not found", class="card-img-top", height="200">
+</div></div>
+<div class="col-md-4">
+    <div class="card mt-5" >
+<img src='/<%=house.productImg5%>', alt="Image not found", class="card-img-top", height="200">
+</div></div>
+<div class="col-md-4">
+    <div class="card mt-5" >
+        <video height="200" controls>
+            <source src="/<%=house.productImg6%>" type="video/mp4">
+          </video>
+<!-- <iframe src='/<%=house.productImg6%>' height="200"></iframe> -->
+</div></div>
+</div></div>
+        
+<%- include ('./partials/footer')%>   
